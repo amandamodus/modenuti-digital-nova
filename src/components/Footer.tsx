@@ -29,7 +29,9 @@ export const Footer = () => {
               <i className="fab fa-facebook text-xl text-primary"></i>
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/modenuti.info/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-12 h-12 glass rounded-full flex items-center justify-center hover:scale-110 hover:shadow-glow transition-all duration-300"
             >
               <i className="fab fa-instagram text-xl text-primary"></i>
