@@ -7,10 +7,11 @@ interface ServiceProps {
   title: string;
   description: string;
   features: string[];
+  image: string;
   delay?: number;
 }
 
-const ServiceCard = ({ icon, title, description, features, delay = 0 }: ServiceProps) => {
+const ServiceCard = ({ icon, title, description, features, image, delay = 0 }: ServiceProps) => {
   return (
     <ScrollReveal delay={delay}>
       <Card className="p-8 group hover:rotate-x-6 hover:scale-105 cursor-pointer relative overflow-hidden">
@@ -19,8 +20,12 @@ const ServiceCard = ({ icon, title, description, features, delay = 0 }: ServiceP
         
         <div className="relative z-10">
           <div className="mb-6">
-            <div className="w-16 h-16 bg-gradient-primary rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-              <i className={`${icon} text-2xl text-primary-foreground`}></i>
+            <div className="w-24 h-24 rounded-xl mb-4 group-hover:scale-110 transition-transform duration-300 overflow-hidden">
+              <img 
+                src={image} 
+                alt={title}
+                className="w-full h-full object-cover rounded-xl"
+              />
             </div>
             <h3 className="text-2xl font-bold text-foreground mb-3">{title}</h3>
             <p className="text-muted-foreground leading-relaxed">{description}</p>
@@ -51,6 +56,7 @@ export const ServicesSection = () => {
       icon: "fas fa-download",
       title: "Formatação & Backup",
       description: "Sistema completamente otimizado com instalação de programas essenciais e backup seguro de todos os seus dados.",
+      image: "/lovable-uploads/a659632d-6bd8-4e61-a7b1-f7c5ca3626fb.png",
       features: [
         "Sistema otimizado",
         "Programas essenciais",
@@ -62,6 +68,7 @@ export const ServicesSection = () => {
       icon: "fas fa-tools",
       title: "Conserto & Manutenção",
       description: "Diagnóstico preciso, reparo profissional e manutenção preventiva para máximo desempenho do seu equipamento.",
+      image: "/lovable-uploads/a36b491f-aad7-4116-9a0f-88eeddd24db4.png",
       features: [
         "Diagnóstico detalhado",
         "Reparo especializado",
@@ -73,6 +80,7 @@ export const ServicesSection = () => {
       icon: "fas fa-desktop",
       title: "Montagem Personalizada",
       description: "PCs sob medida para gaming, trabalho ou uso doméstico com componentes selecionados e garantia total.",
+      image: "/lovable-uploads/9020a2ca-6a3c-45a5-900c-80ad32c4db22.png",
       features: [
         "PCs para gaming",
         "Workstations profissionais",
@@ -84,6 +92,7 @@ export const ServicesSection = () => {
       icon: "fas fa-video",
       title: "Sistemas de Segurança",
       description: "Câmeras HD/4K com monitoramento via aplicativo, storage em nuvem e configuração profissional.",
+      image: "/lovable-uploads/4329475b-d398-4325-b042-6044d0e27b8e.png",
       features: [
         "Câmeras HD/4K",
         "Monitoramento via app",
@@ -95,6 +104,7 @@ export const ServicesSection = () => {
       icon: "fas fa-wifi",
       title: "Soluções Avançadas",
       description: "Redes Wi-Fi 6, automação residencial, consultoria em TI e soluções empresariais personalizadas.",
+      image: "/lovable-uploads/924b740d-892b-49c8-918b-f7e0b52737fd.png",
       features: [
         "Redes Wi-Fi 6",
         "Automação residencial",

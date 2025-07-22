@@ -14,7 +14,7 @@ interface ContactCardProps {
 const ContactCard = ({ icon, title, description, action, actionIcon, delay = 0 }: ContactCardProps) => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Modenuti Informática.");
-    window.open(`https://wa.me/5543999999999?text=${message}`, '_blank');
+    window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
   };
 
   return (
@@ -117,7 +117,7 @@ export const ContactSection = () => {
                 className="group"
                 onClick={() => {
                   const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para os serviços da Modenuti Informática.");
-                  window.open(`https://wa.me/5543999999999?text=${message}`, '_blank');
+                  window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
                 }}
               >
                 <i className="fab fa-whatsapp mr-3 text-2xl group-hover:animate-bounce"></i>

@@ -13,11 +13,9 @@ export const FloatingActionButton = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+  const handleWhatsAppClick = () => {
+    const message = encodeURIComponent("Olá! Gostaria de falar com a Modenuti Informática.");
+    window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
   };
 
   if (!isVisible) return null;
@@ -26,12 +24,12 @@ export const FloatingActionButton = () => {
     <Button
       variant="hero"
       size="icon"
-      className={`fixed bottom-8 right-8 z-50 w-14 h-14 rounded-full shadow-primary transition-all duration-300 ${
-        isVisible ? 'animate-bounce' : ''
+      className={`fixed bottom-8 right-8 z-50 w-16 h-16 rounded-full shadow-primary transition-all duration-300 ${
+        isVisible ? 'animate-pulse' : ''
       }`}
-      onClick={scrollToTop}
+      onClick={handleWhatsAppClick}
     >
-      <i className="fas fa-chevron-up text-xl"></i>
+      <i className="fab fa-whatsapp text-2xl"></i>
     </Button>
   );
 };

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import modenutiLogo from "@/assets/modenuti-logo.png";
+const modenutiLogo = "/lovable-uploads/be073bea-6a75-444f-ab19-33bf057ee378.png";
 
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +68,15 @@ export const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <Button variant="hero" size="sm" className="hidden md:flex">
+          <Button 
+            variant="hero" 
+            size="sm" 
+            className="hidden md:flex"
+            onClick={() => {
+              const message = encodeURIComponent("Olá! Gostaria de falar com a Modenuti Informática.");
+              window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
+            }}
+          >
             <i className="fab fa-whatsapp mr-2"></i>
             Contato Direto
           </Button>
