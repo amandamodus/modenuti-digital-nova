@@ -32,7 +32,7 @@ const ContactCard = ({ icon, title, description, action, actionIcon, delay = 0 }
           <Button 
             variant="outline" 
             className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
-            onClick={title.includes('WhatsApp') ? handleWhatsAppClick : undefined}
+            onClick={title.includes('WhatsApp') ? () => window.open('https://wa.me/+5543991241702', '_blank') : undefined}
           >
             {actionIcon && <i className={`${actionIcon} mr-2`}></i>}
             {action}
