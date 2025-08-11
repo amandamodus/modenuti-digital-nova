@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Preloader } from "@/components/Preloader";
+import { useEffect } from "react";
+
 import { CustomCursor } from "@/components/CustomCursor";
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
@@ -12,11 +12,6 @@ import { Footer } from "@/components/Footer";
 import { FloatingActionButton } from "@/components/FloatingActionButton";
 
 const Index = () => {
-  const [isLoading, setIsLoading] = useState(true);
-
-  const handlePreloaderComplete = () => {
-    setIsLoading(false);
-  };
 
   // Hide default cursor
   useEffect(() => {
@@ -26,9 +21,6 @@ const Index = () => {
     };
   }, []);
 
-  if (isLoading) {
-    return <Preloader onComplete={handlePreloaderComplete} />;
-  }
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
