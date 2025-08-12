@@ -14,7 +14,7 @@ interface ContactCardProps {
 const ContactCard = ({ icon, title, description, action, actionIcon, delay = 0 }: ContactCardProps) => {
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de saber mais sobre os serviços da Modenuti Informática.");
-    window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
+    window.open(`https://wa.me/5543991241702?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -32,7 +32,7 @@ const ContactCard = ({ icon, title, description, action, actionIcon, delay = 0 }
           <Button 
             variant="outline" 
             className="w-full group-hover:bg-primary group-hover:text-primary-foreground"
-            onClick={title.includes('WhatsApp') ? () => window.open('https://wa.me/+5543991241702', '_blank') : undefined}
+            onClick={title.includes('WhatsApp') ? () => window.open('https://wa.me/5543991241702', '_blank', 'noopener,noreferrer') : undefined}
           >
             {actionIcon && <i className={`${actionIcon} mr-2`}></i>}
             {action}
@@ -117,7 +117,7 @@ export const ContactSection = () => {
                 className="group"
                 onClick={() => {
                   const message = encodeURIComponent("Olá! Gostaria de solicitar um orçamento para os serviços da Modenuti Informática.");
-                  window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
+                  window.open(`https://wa.me/5543991241702?text=${message}`, '_blank', 'noopener,noreferrer');
                 }}
               >
                 <i className="fab fa-whatsapp mr-3 text-2xl group-hover:animate-bounce"></i>

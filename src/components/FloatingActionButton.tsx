@@ -15,7 +15,7 @@ export const FloatingActionButton = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Olá! Gostaria de falar com a Modenuti Informática.");
-    window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
+    window.open(`https://wa.me/5543991241702?text=${message}`, '_blank', 'noopener,noreferrer');
   };
 
   if (!isVisible) return null;

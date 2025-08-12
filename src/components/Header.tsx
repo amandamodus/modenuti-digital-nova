@@ -74,7 +74,7 @@ export const Header = () => {
             className="hidden md:flex"
             onClick={() => {
               const message = encodeURIComponent("Olá! Gostaria de falar com a Modenuti Informática.");
-              window.open(`http://wa.me/+5543991241702?text=${message}`, '_blank');
+              window.open(`https://wa.me/5543991241702?text=${message}`, '_blank', 'noopener,noreferrer');
             }}
           >
             <i className="fab fa-whatsapp mr-2"></i>
